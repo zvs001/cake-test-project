@@ -25,8 +25,12 @@ interface AprRowProps {
 
 const AprRow: React.FC<AprRowProps> = ({ pool, stakedBalance, performanceFee = 0 }) => {
   const { t } = useTranslation()
-  const { stakingToken, earningToken, isFinished, apr, earningTokenPrice, stakingTokenPrice, userData, isAutoVault } =
+  const { stakingToken, earningToken, isFinished, apr = 1000000, earningTokenPrice, stakingTokenPrice, userData, isAutoVault } =
     pool
+  // let {  apr, earningTokenPrice, stakingTokenPrice, userData, isAutoVault } =
+  //   pool
+
+  console.log('apir', apr)
 
   const stakingTokenBalance = userData?.stakingTokenBalance ? new BigNumber(userData.stakingTokenBalance) : BIG_ZERO
 

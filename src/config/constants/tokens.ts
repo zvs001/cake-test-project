@@ -13,6 +13,14 @@ interface SerializedTokenList {
 }
 
 export const mainnetTokens = {
+  annabell: new Token(
+    MAINNET,
+    '0x5BEc8B07e4C1f7aa054B4a78EA22E2901Aae0a2E',
+    18,
+    'AnnaB',
+    'AnnaBell Token',
+    'https://pancakeswap.finance/',
+  ),
   wbnb: new Token(
     MAINNET,
     '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
@@ -1639,6 +1647,14 @@ export const mainnetTokens = {
 }
 
 export const testnetTokens = {
+  annabell: new Token(
+    TESTNET,
+    '0x5BEc8B07e4C1f7aa054B4a78EA22E2901Aae0a2E',
+    18,
+    'AnnaB',
+    'AnnaBell Token',
+    'https://pancakeswap.finance/',
+  ),
   wbnb: new Token(
     TESTNET,
     '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
@@ -1649,7 +1665,7 @@ export const testnetTokens = {
   ),
   cake: new Token(
     TESTNET,
-    '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+    '0x5BEc8B07e4C1f7aa054B4a78EA22E2901Aae0a2E',
     18,
     'CAKE',
     'PancakeSwap Token',
@@ -1665,7 +1681,7 @@ export const testnetTokens = {
   ),
   syrup: new Token(
     TESTNET,
-    '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
+    '0x88a827205D64a89fdcaD215f160885Fe77E2e35C',
     18,
     'SYRUP',
     'SyrupBar Token',

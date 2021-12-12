@@ -108,6 +108,7 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({ pool, userDataLoa
   const [onPresentVaultUnstake] = useModal(<VaultStakeModal stakingMax={cakeAsBigNumber} pool={pool} isRemovingStake />)
 
   const onStake = () => {
+    console.log('onStake', isAutoVault)
     if (isAutoVault) {
       onPresentVaultStake()
     } else {

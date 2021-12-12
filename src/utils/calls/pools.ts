@@ -14,6 +14,9 @@ export const getActivePools = async (block?: number) => {
     .filter((pool) => pool.sousId !== 0)
     .filter((pool) => pool.isFinished === false || pool.isFinished === undefined)
   const blockNumber = block || (await simpleRpcProvider.getBlockNumber())
+
+  console.log('getActivePools', block)
+
   const startBlockCalls = eligiblePools.map(({ contractAddress }) => ({
     address: getAddress(contractAddress),
     name: 'startBlock',
@@ -25,6 +28,7 @@ export const getActivePools = async (block?: number) => {
   const startBlocks = await multicall(sousChefV2, startBlockCalls)
   const endBlocks = await multicall(sousChefV2, endBlockCalls)
 
+  console.log('getActivePools END')
   return eligiblePools.reduce((accum, poolCheck, index) => {
     const startBlock = startBlocks[index] ? new BigNumber(startBlocks[index]) : null
     const endBlock = endBlocks[index] ? new BigNumber(endBlocks[index]) : null

@@ -1,0 +1,32 @@
+.bMPnRQ, .kDVuGw {
+    position: relative;
+}
+
+
+.bMPnRQ:after {
+    background-color: #fff;
+    background-image: url('./vntu.png');
+}
+
+.bMPnRQ:after, .kDVuGw:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.kDVuGw:after {
+    background-color: #27262D;
+    background-size: contain;
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+
+.cHztPg {
+    display: none !important;
+}

@@ -93,7 +93,7 @@ export const initialState: UserState = {
   isDark: false,
   userFarmStakedOnly: FarmStakedOnly.ON_FINISHED,
   userPoolStakedOnly: false,
-  userPoolsViewMode: ViewMode.TABLE,
+  userPoolsViewMode: ViewMode.CARD,
   userFarmsViewMode: ViewMode.TABLE,
   userPredictionAcceptedRisk: false,
   userPredictionChartDisclaimerShow: true,

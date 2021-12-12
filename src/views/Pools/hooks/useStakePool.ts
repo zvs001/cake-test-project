@@ -41,6 +41,8 @@ const useStakePool = (sousId: number, isUsingBnb = false) => {
 
   const handleStake = useCallback(
     async (amount: string, decimals: number) => {
+      console.log('handleStake', amount, decimals, sousId, isUsingBnb)
+      console.warn('handleStake', amount, decimals, sousId, isUsingBnb)
       if (sousId === 0) {
         await stakeFarm(masterChefContract, 0, amount)
       } else if (isUsingBnb) {

@@ -43,7 +43,6 @@ const PoolCard: React.FC<{ pool: DeserializedPool; account: string }> = ({ pool,
           )}
         </Flex>
       </CardBody>
-      <CardFooter pool={pool} account={account} />
     </StyledCard>
   )
 }

@@ -25,6 +25,7 @@ function useFetchListCallback(): (listUrl: string, sendDispatch?: boolean) => Pr
     [chainId, library],
   )
 
+  // list is actual for mainnet only
   // note: prevent dispatch if using for list search or unsupported list
   return useCallback(
     async (listUrl: string, sendDispatch = true) => {
@@ -32,6 +33,7 @@ function useFetchListCallback(): (listUrl: string, sendDispatch?: boolean) => Pr
       if (sendDispatch) {
         dispatch(fetchTokenList.pending({ requestId, url: listUrl }))
       }
+
       return getTokenList(listUrl, ensResolver)
         .then((tokenList) => {
           if (sendDispatch) {
